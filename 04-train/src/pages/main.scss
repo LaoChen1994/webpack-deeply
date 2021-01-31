@@ -1,0 +1,13 @@
+:root {
+  --red: #ff4444;
+}
+
+.main {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+
+  .color {
+    color: var(--red);
+  }
+}

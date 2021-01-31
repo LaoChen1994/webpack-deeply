@@ -1,0 +1,56 @@
+{
+  "name": "webpack-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:base": "rm -rf ./01-base/dist/* && webpack --config ./01-base/webpack.config.js",
+    "dev:module": "rm -rf ./02-module/dist/* && webpack --config ./02-module/webpack.config.js",
+    "dev:server": "rm -rf ./03-devServer/dist/* && webpack --watch --config ./03-devServer/webpack.config.js",
+    "dev:train": "rm -rf ./04-train/dist/* && webpack --watch --config ./04-train/webpack.config.js",
+    "dev:spa": "rm -rf ./05-spa/dist/* && webpack --watch --config ./05-spa/webpack.config.js",
+    "dev:mspa": "rm -rf ./06-multi-spa/dist/* && webpack --watch --config ./06-multi-spa/webpack.config.js",
+    "dev:react-server": "webpack --watch --config ./07-server/webpack-server.config.js",
+    "dev:react-browser": "webpack --watch --config ./07-server/webpack-browser.config.js",
+    "dev:electron": "rm -rf ./08-electron/dist/* && webpack --watch --config ./08-electron/webpack-browser.config.js"
+
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "iOS >= 7",
+    "Android > 4.1",
+    "Firefox > 20"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "autoprefixer": "9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "ignore-loader": "^0.1.2",
+    "mini-css-extract-plugin": "^1.3.4",
+    "node-sass": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "url-loader": "^4.1.1",
+    "web-webpack-plugin": "^4.6.7",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "2.9.7",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
