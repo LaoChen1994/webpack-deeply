@@ -1,14 +1,14 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const DefinePlugin = require("webpack/lib/DefinePlugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/app.js'),
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "./dist/"),
   },
+  // target: 'electron-renderer',
   mode: "development",
   module: {
     rules: [
@@ -41,18 +41,15 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './template.html'),
-      filename: 'index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name]_[contenthash:8].css'
-    }),
     new DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
     }),
+    new HtmlWebpackPlugin({
+      path: path.resolve(__dirname, './dist/'),
+      template: path.resolve(__dirname, './template.html')
+    })
   ],
   resolve: {
     extensions: [".js", ".jsx"],

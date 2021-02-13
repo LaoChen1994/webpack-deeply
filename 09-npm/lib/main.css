@@ -1,0 +1,4 @@
+.myBtn{padding:4px 8px;border:1px solid #f44;background-color:#fff;color:#f44;display:inline-block;cursor:pointer}
+
+.tag{border-radius:4px;padding:4px 8px}.tag.success{border:1px solid #15db31;color:#15db31}.tag.fail{border:1px solid #f44;color:#f44}
+

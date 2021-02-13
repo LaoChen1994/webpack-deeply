@@ -1,0 +1,14 @@
+.tag {
+  border-radius: 4px;
+  padding: 4px 8px;
+
+  &.success {
+    border: 1px solid #15db31;
+    color: #15db31;
+  }
+
+  &.fail {
+    border: 1px solid #f44;
+    color:  #f44;
+  }
+}
