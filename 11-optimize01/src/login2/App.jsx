@@ -13,6 +13,9 @@ export const App = () => {
   return (
     <div className={styles.title}>
       <Home />
+      <div>
+        1234
+      </div>
     </div>
   )
 }
