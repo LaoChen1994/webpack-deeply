@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[592],{352:function(n,u,c){"use strict";function e(n,u){var c=n+u;return console.log("this is funcA"),c}c.d(u,{q:function(){return e}})}}]);
