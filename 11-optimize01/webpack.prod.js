@@ -2,28 +2,28 @@ const { merge } = require('webpack-merge')
 const common = require('./webpack.config')
 const uglyWebpackPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
-// const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
+const DefinePlugin = require('webpack/lib/DefinePlugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
+  plugins: [
+    new DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
+  ],
   optimization: {
+    minimize: true,
     minimizer: [
-      new uglyWebpackPlugin({
-        cache: true,
-        test: /\.js(\?.*)?$/i,
-        include: [path.resolve(__dirname, './dist')],
-        parallel: true,
-        uglifyOptions: {
-          compress: {
-            drop_console: true,
-            warnnings: false
-          },
-          output: {
-            beautify: false,
-            comments: false
-          }
+      new TerserPlugin({
+        terserOptions: {
+          toplevel: true,
+          ie8: true,
+          safari10: true
         }
-      })
+      }),
     ]
   }
 })

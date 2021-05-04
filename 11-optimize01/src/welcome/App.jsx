@@ -7,7 +7,7 @@ export const App = () => {
   console.log('styles = ', co1())
   return (
     <div className={styles.title}>
-      <span>welcome 1</span>
+      <span>welcome 2</span>
       <About />
     </div>
   )

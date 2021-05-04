@@ -1,0 +1,19 @@
+:global(.tab) {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+:global(.tab-item) {
+  flex: 1;
+  border: 1px solid #333;
+  border-bottom: 0px;
+  box-shadow: inset 2px 2px #eee;
+  text-align: center;
+}
+
+.test {
+  color: black
+}

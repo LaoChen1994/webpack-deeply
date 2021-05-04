@@ -16,8 +16,11 @@
     "dev:npm": "rm -rf ./09-npm/dist/* && webpack --watch --config ./09-npm/webpack.dev.js",
     "build:npm": "rm -rf ./09-npm/lib/* && webpack --watch --config ./09-npm/webpack.prod.js",
     "dev:opt1": "rm -rf ./11-optimize01/dist/* && webpack --config ./11-optimize01/webpack.dev.js",
+    "devServe:opt1": "rm -rf ./11-optimize01/dist/* && webpack serve --config ./11-optimize01/webpack.dev.js",
     "build:opt1": "rm -rf ./11-optimize01/dist/* && webpack --config ./11-optimize01/webpack.prod.js",
-    "dev:dll": "rm -rf ./11-optimize01/manifest/* && webpack --config ./11-optimize01/webpack_dll.config.js"
+    "dev:dll": "rm -rf ./11-optimize01/manifest/* && webpack --config ./11-optimize01/webpack_dll.config.js",
+    "build:opt2": "rm -rf ./12-optimize02/dist/* && webpack --config ./12-optimize02/webpack.config.js",
+    "build:opt3": "rm -rf ./13-optimize03/dist/* && webpack --config ./13-optimize03/webpack.config.js"
   },
   "browserslist": [
     "last 2 version",
@@ -49,8 +52,12 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
+    "prepack-webpack-plugin": "^1.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loadable": "^5.5.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.14",
@@ -60,13 +67,14 @@
     "web-webpack-plugin": "^4.6.7",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.3.0",
-    "webpack-dev-server": "2.9.7",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3",
     "webpack-node-externals": "^2.5.2",
     "webpack-parallel-uglify-plugin": "^2.0.0"
   },
   "devDependencies": {
     "happypack": "^5.0.1",
+    "terser-webpack-plugin": "^5.1.1",
     "thread-loader": "^3.0.3"
   }
 }

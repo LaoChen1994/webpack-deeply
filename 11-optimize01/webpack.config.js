@@ -29,11 +29,11 @@ module.exports = {
         test: /\.s(a|c)ss$/i,
         use: [
           'style-loader',
-          // MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              modules: true
+              modules: true,
             }
           },
           'postcss-loader',
@@ -82,7 +82,7 @@ module.exports = {
         ],
         threads: 5,
         verbose: false,
-        threadPool: happyThreadPool
+        threadPool: happyThreadPool,
     }),
   ],
   resolve: {
